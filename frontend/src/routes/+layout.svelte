@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
+  import { Quit } from "$lib/wailsjs/runtime/runtime.js";
+  import "../app.postcss";
   import { AppBar } from "@skeletonlabs/skeleton";
   import { LightSwitch } from "@skeletonlabs/skeleton";
-  import "../app.postcss";
   import { onMount } from "svelte";
   import { setInitialClassState } from "@skeletonlabs/skeleton";
   onMount(() => {
@@ -13,7 +14,7 @@
   <AppBar>
     <svelte:fragment slot="lead">Sample</svelte:fragment>
     <svelte:fragment slot="trail"
-      ><LightSwitch /><button on:click={runtime.Quit}
+      ><LightSwitch /><button on:click={Quit}
         ><svg class="w-4 h-4" viewBox="0 0 20 20">
           <path
             class="fill-black dark:fill-white"
